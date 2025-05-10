@@ -314,6 +314,8 @@ CAMPO CATEGORIA E CURSOS */
     height: 100%;
     padding-right: 20px;
 }
+/* obs: as imagens devem estar do mesmo tamnho +- 1920x1080  */
+
 .curso a{
     text-decoration: none;
     text-transform: lowercase;
