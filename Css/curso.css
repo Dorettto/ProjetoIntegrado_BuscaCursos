@@ -1,0 +1,249 @@
+/* AQUI A O STYLES DA TELA RPINCIPAL, HEADER E FOOTER */
+
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/BebasNeue-Regular.otf);
+    src: url(../fonts/BebasNeue-Regular.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: vietnam;
+    src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+
+/* Variáveis de cores */
+:root {
+    --azul-escuro: #00145A;
+    --azul-normal: #2573D9;
+    --branco: #F0F9FF;
+    --cinza: #686461;
+    --branco-bege: #F2E7DC;
+}
+h1{
+    font-family: bebas;
+}
+h2{
+    font-family: bebas;
+}
+h3{
+    font-family: bebas;
+}
+h4{
+    font-family: bebas;
+}
+a{
+    font-family: vietnam;
+}
+p{
+    font-family: vietnam;
+}
+input{
+    font-family: vietnam;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.div_container{
+    width: 100%;
+    background-color: var(--azul-escuro);
+    height: 100%;
+}
+
+/* HEADER */
+ 
+header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5%;
+}
+main{
+background-color: var(--branco-bege);
+
+}
+.div-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    width: 20%;
+
+}
+
+.div-logo img{
+    width: 80%;
+    height: 100%;
+    margin-left: 30%;
+}
+
+/* NAVE */
+nav{
+    display: flex;
+    gap: 20px;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: var(--branco-bege);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+nav a:hover{
+    color: var(--azul-normal);
+    transition: 0.3s;
+    font-weight: 900;
+}
+
+
+/* botao login */
+
+.div-login {
+    width: 10%;
+    margin-left: auto; /* Empurra o botão para o canto direito */
+    display: flex;
+}
+
+.div-login a {
+    text-decoration: none;
+    color: var(--branco-bege);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.div-login a:hover {
+    color: var(--azul-normal);
+    transition: 0.3s;
+    font-weight: 900;
+}
+
+/* CAMPO BUSCA */
+
+.search-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background-color: var(--branco-bege);
+    padding: 3%;
+}
+.div-search{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 4%;
+}
+.div-search input[type="text"] {
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid var(--branco-bege);
+    border-radius: 2.0rem;
+    font-size: 1.0rem;
+    background-color: var(--azul-normal); 
+}
+
+.div-search input[type="text"]::placeholder {
+    color: var(--branco-bege); 
+    font-weight: 600;
+}
+
+/* CURSOS E FILTROS */
+
+.container-cursoFiltros{
+    width: 100%;
+    height: 50%;
+    background-color: violet;
+    
+} 
+
+/* filtros */
+.container-filtros{
+    width: 18%;
+    height: 100%;
+    background-color: var(--azul-escuro);
+    
+}
+
+.div-headerFiltros{
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18%;
+}
+.div-headerFiltros h2{
+    color: var(--branco-bege);
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+.div-headerFiltros a{
+    text-decoration: none;
+}
+.div-headerFiltros a:hover{
+    text-decoration: underline;
+}
+.div-headerFiltros p{
+    color: var(--branco-bege);
+    font-size: 0.9rem;
+    font-weight: 400;}
+
+/* --- */
+.div-filtros{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: brown;
+    margin-top: 2%;
+}
+.filtro{
+    width: 100%;
+    height: 100%;
+    background-color: yellowgreen;
+
+}
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: var(--branco-bege);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--azul-escuro);
+    font-size: 1.0rem;
+}
+footer a:hover{
+    color: var(--cinza);
+ }
