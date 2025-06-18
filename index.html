@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuscaCursos | Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="Css/styles.css">
+    <script src="Js/script.js" defer></script>
 </head>
 
 <body>
@@ -16,23 +17,26 @@
             <div class="div-logo">
                 <a href="index.html">
                     <img src="assets/images/logo_Busca.png" alt="Logo BuscaCursos">
+                    <!-- <div class="texto-imagem">Logo BuscaCursos</div> -->
                 </a>
             </div>
 
             <nav>
                 <ul>
-                    <li><a href="/Pages/quemSomos.html">
-                            <h3>QUEM SOMOS</h3>
+                    <li><a href="Pages/quemSomos.html" target="_blank">
+                            <h2>QUEM SOMOS</h2>
                         </a></li>
-                    <li><a href="/Pages/faq.html">
-                            <h3>F.A.Q</h3>
+                    <li><a href="Pages/faq.html" target="_blank">
+                            <h2>F.A.Q</h2>
                         </a></li>
-                    <li><a href="/Pages/apoieProjeto.html">
-                            <h3>APOIE O PROJETO</h3>
+                    <li><a href="Pages/apoieProjeto.html" target="_blank">
+                            <h2>APOIE O PROJETO</h2>
                         </a></li>
                 </ul>
                 <div class="div-login">
-                    <a href=""><h3>LOG IN</h3></a>
+                    <a href="/Pages/login.html">
+                        <h3>LOG IN</h3>
+                    </a>
                 </div>
             </nav>
         </header>
@@ -52,8 +56,10 @@
 
                 <div class="div-search">
 
-                    <form action=" " method="post">
-                        <input type="text" placeholder="    DIGITE SUA BUSCA" required>
+                    <form action=" " method="post" autocomplete="off">
+                        <input type="text" id="barraDeBusca" placeholder="    DIGITE SUA BUSCA" required>
+                        <div id="sugestoes" class="sugestoes-container"></div>
+
                         <!-- falta colocar a lupinha dentro do input - gaby -->
                     </form>
 
@@ -68,6 +74,7 @@
                 <div class="div-categoria">
 
                     <ul>
+                        <li><a href="Pages/pagesCursos.html">todos os cursos</a></li>
                         <li><a href="">programação</a></li>
                         <li><a href="">banco de dados</a></li>
                         <li><a href="">gestão e negócios</a></li>
@@ -87,7 +94,7 @@
 
                     <div class="div-subTitle">
                         <h2>CURSOS ON-LINE E GRATUITOS</h2>
-                        <p>um espaço para fazer uma pequena introdução</p>
+                        <p>"Oportunidades de aprendizado gratuitas, com acesso fácil às melhores plataformas."</p>
                         <hr>
                     </div>
 
@@ -100,18 +107,34 @@
                             <!-- Linha 1 -->
 
                             <div class="curso">
-                                <a href="Pages/curso.html">
+
+                                <a href="Pages/pagesCursos.html">
+
                                     <h3>Recentes</h3>
-                                    <img src="assets/images/fundo_buscaCursos.jpg" alt="">
+                                    <div class="carrossel-container">
+                                        <div class="carrossel">
+                                            <img src="assets/images/img-recentes.jpg" alt="">
+                                            <img src="assets/images/img2-recentes.png" alt="">
+                                            <img src="assets/images/img3-recentes.png" alt="">
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
 
                             <div class="curso">
-                                <a href="Pages/curso.html">
-                                    <h3>Populares</h3>
 
-                                    <img src="assets/images/fundo_buscaCursos.jpg" alt="">
+                                <a href="Pages/pagesCursos.html">
+
+                                    <h3>Populares</h3>
+                                    <div class="carrossel-container">
+                                        <div class="carrossel">
+                                            <img src="assets/images/img3-populares.png" alt="">
+                                            <img src="assets/images/img-populares.png" alt="">
+                                            <img src="assets/images/img2-populares.png" alt="">
+                                        </div>
+                                    </div>
                                 </a>
+                                <!-- <imgsrc="assets/images/fundo_buscaCursos.jpg"alt="">-->
                             </div>
                         </div>
 
@@ -119,23 +142,22 @@
                         <div class="linha-curso">
 
                             <div class="curso">
-                                <a href="Pages/curso.html">
+
+                                <a href="Pages/pagesCursos.html">
                                     <h3> essenciais</h3>
-                                    <img src="assets/images/fundo_buscaCursos.jpg" alt="">
+                                    <img src="assets/images/essenciais.jpg" alt="">
                                 </a>
                             </div>
 
                             <div class="curso">
-                                <a href="Pages/curso.html">
+                      <a href="Pages/pagesCursos.html">
                                     <h3>primeiros passos</h3>
-                                    <img src="assets/images/fundo_buscaCursos.jpg" alt="">
+                                    <img src="assets/images/primeiroPassos.png" alt="">
                                 </a>
                             </div>
                         </div>
 
                     </div>
-
-
 
                 </div>
 
@@ -145,14 +167,53 @@
 
         <!-- FOOTER -->
         <footer>
+            <div class="footer-container">
+
+                <div class="footer-logo">
+                    <a href="">
+                        <img src="assets/images/logo_Busca.png" alt="Logo BuscaCursos">
+                    </a>
+                    <p class="footer-endereco">
+                    Av. Aguia de Haia, 2.983 - Cidade A. E. Carvalho<br>
+                    São Paulo/SP - CEP: 03694-000
+                    </p>
+                </div>
+
+                <div class="footer-redes">
+                    <h2>REDES SOCIAIS</h2>
+                    <div class="footer-redes-icons">
+
+                        <a href="https://www.youtube.com/c/FatecZLeste" target="_blank">
+                            <img src="assets/images/contatos_youtube.png" alt="YouTube">
+                        </a>
+
+                        <a href="https://www.facebook.com/fateczl.oficial" target="_blank">
+                            <img src="assets/images/contatos_facebook.png" alt="Facebook">
+                        </a>
+
+                        <a href="https://www.instagram.com/fateczl.oficial/#" target="_blank">
+                            <img src="assets/images/contatos_insta.png" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.linkedin.com/school/fateczl-oficial/posts/?feedView=all" target="_blank">
+                            <img src="assets/images/contatos_linkedin.png" alt="LinkedIn">
+                        </a>    
+
+                        <a href="https://www.tiktok.com/@fateczl.oficial" target="_blank">
+                            <img src="assets/images/contatos_tiktok.png" alt="TikTok">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
             <ul>
-                <li><a href="">Termo de Uso</a></li>
-                <li><a href="">Politica de Privacidade</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a target="_blank" href="Pages/TermosUso.html">Termos de Uso</a></li>
+                <li><a target="_blank" href="Pages/PolPrivacidade.html">Política de Privacidade</a></li>
             </ul>
+
         </footer>
     </div>
-
 </body>
 
 </html>

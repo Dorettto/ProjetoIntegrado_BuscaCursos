@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuscaCursos | Quem Somos</title>
-    <link rel="stylesheet" href="../Css/quemSomos.css"> <!-- css dessa pagina -->
+    <title>BuscaCursos | Login</title>
+    <link rel="stylesheet" href="../Css/styles.css">
 </head>
-
 <body>
-    <div class="div_container">
-       
+
         <!--HEADER E NAVE -->
         <header>
             <div class="div-logo">
@@ -21,7 +18,7 @@
 
             <nav>
                 <ul>
-                     <li><a href="../Pages/quemSomos.html" target="_blank">
+                   <li><a href="../Pages/quemSomos.html" target="_blank">
                             <h2>QUEM SOMOS</h2>
                         </a></li>
                     <li><a href="../Pages/faq.html" target="_blank">
@@ -31,55 +28,29 @@
                             <h2>APOIE O PROJETO</h2>
                         </a></li>
                 </ul>
-                <div class="div-login">
-                    <a href="/Pages/login.html">
-                        <h3>LOG IN</h3>
-                    </a>
-                </div>
             </nav>
-
+            
         </header>
 
-
-        <main>
-
-            <!-- Titulo -->
-            <div class="div-titulo">
-                <h1>QUEM SOMOS</h1>
-                <!-- <img src="../assets/images/icone_lupa.png" alt="" class="img-lupa"> -->
+    <main>
+        <section class="login">
+            <div class="div-tituloLogin">
+                <h1>Entrar na sua conta</h1>
             </div>
 
-            <!-- texto -->
-            <div class="div-texto">
-                <p>A plataforma Busca Cursos foi idealizada e projetada por estudantes de Desenvolvimento de Software
-                    Multiplataforma da Faculdade de Tecnologia da Zona Leste.</p>
-                <p>O projeto possui como objetivo democratizar e facilitar o acesso a cursos on-line gratuitos, criando
-                    um
-                    repositório correlacionando diversas plataformas educacionais gratuitas e seus respectivos cursos em
-                    um
-                    único lugar.</p>
-                <p>A partir da interação do usuário com a plataforma Busca Cursos, é possível realizar buscas mais
-                    detalhadas utilizando filtros e eliminando a necessidade de executar diversas buscas manuais
-                    diretamente
-                    em cada plataforma, assim evitando o uso de sites de busca que misturem conteúdos pagos entre os
-                    resultados da pesquisa, além de ajudar a promover canais de cursos grátis menos conhecidos e menos
-                    favorecidos pelos motores de busca convencionais. </p>
-            </div>
+             <div id="feedback-login" class="mensagem-oculta"></div>
 
-            <!-- Botao -->
+            <form id="formLogin" class="formulario-login">
+                <label for="usuarioLogin">Usuário:</label><br>
+                <input type="text" id="usuarioLogin" class="entrada-login" autocomplete="username"><br> <label for="senhaLogin">Senha:</label><br>
+                <input type="password" id="senhaLogin" class="entrada-login" autocomplete="current-password"><br> <button type="submit" class="botao-login">Entrar</button>
+            </form>
 
-            <div class="div-button">
-                <button><a href="https://github.com/Dorettto/ProjetoIntegrado_DSM" target="_blank"
-                        rel="noopener noreferrer">
-                    <h3>visite o repositório do projeto</h3>
-                    </a>
-                </button>
-            </div>
+        </section>
+    </main>
 
-        </main>
-
-        <!-- FOOTER -->
-        <footer>
+         <!-- FOOTER -->
+     <footer>
             <div class="footer-container">
 
                 <div class="footer-logo">
@@ -125,8 +96,9 @@
                 <li><a target="_blank" href="Pages/PolPrivacidade.html">Política de Privacidade</a></li>
             </ul>
         </footer>
-    </div>
+</div>
 
+    <script src="../Js/forms.js"></script>
+    
 </body>
-
 </html>

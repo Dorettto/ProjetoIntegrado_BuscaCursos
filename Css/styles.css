@@ -17,27 +17,16 @@
     --azul-escuro: #00145A;
     --azul-normal: #2573D9;
     --branco: #F0F9FF;
-    --cinza: #686461;
+    --cinza: #3d3d3d;
     --branco-bege: #F2E7DC;
 }
-h1{
+h1, h2, h3, h4{
     font-family: bebas;
 }
-h2{
-    font-family: bebas;
-}
-h3{
-    font-family: bebas;
-}
-h4{
-    font-family: bebas;
-}
-a{
+a, p{
     font-family: vietnam;
 }
-p{
-    font-family: vietnam;
-}
+
 input{
     font-family: vietnam;
 }
@@ -47,6 +36,7 @@ body {
     padding: 0;
     max-width: 100vw;
     overflow-x: hidden;
+    background-color: var(--azul-escuro);
 }
 
 .div_container{
@@ -59,43 +49,37 @@ body {
  
 header{
     width: 100%;
-    height: 20%;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5%;
 }
-main{
-    background-image: url(/assets/images/fundo_buscaCursos.jpg);
-}
 .div-logo{
     display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 20px;
-    width: 20%;
 
 }
 
 .div-logo img{
     width: 80%;
     height: 100%;
-    margin-left: 30%;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* NAVE */
+/* NAV */
 nav{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
     width: 70%;
-    justify-content: center;
     align-items: center;
-    height: 10%;
 }
 nav ul{
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin-left: 30px;
 }
 nav a{
     text-decoration: none;
@@ -114,7 +98,7 @@ nav a:hover{
 
 .div-login {
     width: 10%;
-    margin-left: auto; /* Empurra o botão para o canto direito */
+    margin-left: auto; 
     display: flex;
 }
 
@@ -133,8 +117,10 @@ nav a:hover{
 /* CAMPO BUSCA */
 
 .search-container {
-    align-items: center;
-    justify-content: center;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
     width: 100%;
     height: 30%;
     background-color: var(--branco-bege);
@@ -142,16 +128,29 @@ nav a:hover{
 }
 
 .div-titulo{
-   width: 100%;
+    width: 100%;
     height: 60%;
     text-align: center;
     justify-content: center;
     
+}
 
+.div-tituloBranco{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    background-color: transparent;
+
+}
+.div-tituloBranco h1{
+    color: var(--branco-bege);
+    font-size: 4.0rem;
+    padding-left: 11%;
 }
 
 .div-titulo h1{
-    font-size: 3.0rem;
+    font-size: 4.10rem;
     color: var(--azul-escuro);
     font-weight: bold;
     margin-top: 0;
@@ -160,33 +159,89 @@ nav a:hover{
 }
 
 .div-titulo p{
-    font-size: 0.8rem;
+    font-size: 1.10rem;
     font-weight: 600;
     margin-top: 0;
 }
 
-.div-search{
-    width: 100%;
-    height: 60%;
-    text-align: center;
+.div-search {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     justify-content: center;
-    padding-top: 4%;
+    position: relative; 
+    width: 100%; 
 }
 
 .div-search input[type="text"] {
-    width: 60%;
+    width: 1000px;
     height: 30px;
     padding: 10px;
     border: 1px solid var(--branco-bege);
     border-radius: 2.0rem;
     font-size: 1.0rem;
-    background-color: var(--azul-normal); 
+    background-color: var(--azul-normal);
+    color: var(--branco-bege);
 }
 
 .div-search input[type="text"]::placeholder {
     color: var(--branco-bege); 
     font-weight: 600;
 }
+
+.div-texto{
+    width: 80%;
+    height: 50%;
+    display: flex;  
+    flex-direction: column;
+    border-left: 6px solid var(--branco-bege);
+    margin-left: 12%; 
+    margin-bottom: 60px;
+}
+
+.div-texto p{
+    color: var(--branco-bege);
+    padding-left: 1%;
+    padding-right: 20%;
+    line-height: 1.5;   
+}
+
+.div-texto h2{
+    color: var(--branco-bege);
+    padding-left: 1%;
+    padding-right: 20%; 
+    margin-bottom: -10px;
+}
+.div-texto a{
+    color: var(--branco-bege);
+    padding-right: 20%; 
+}
+
+.sugestoes-container {
+    position: absolute;
+    top: 100%; 
+    background-color: white;
+    border: 1px solid #ffffff;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    width: 50%; 
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    margin-left: 2%;
+}
+
+.sugestao {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.sugestao:hover {
+    background-color: #eae4e4;
+}
+
+
 /* 
 CAMPO CATEGORIA E CURSOS */
 
@@ -198,32 +253,35 @@ CAMPO CATEGORIA E CURSOS */
     justify-content: center;
     background-color: var(--azul-escuro);
     margin-top: 0;
-    margin-bottom: 1%;
+    margin-bottom: 1%;    
 }
 
 /* Categorias */
 .div-categoria{
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--azul-escuro);
     gap: 15px;
+    padding: 1%;
+    margin-left: 150px;
+    margin-right: -200px;
 }
 
 .div-categoria ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     text-align: center;
-    width: 40%;
+    width: 42%;
     height: 100%;
 }
 
 .div-categoria ul li {
-    border: 1px solid var(--azul-normal); 
+    border: 2px solid var(--azul-normal); 
     padding: 10px; 
     border-radius: 2.0rem; 
     text-align: center; 
@@ -244,12 +302,9 @@ CAMPO CATEGORIA E CURSOS */
     transition: 0.3s; 
 }
 
-
-
-
 /*  Cursos */
 .div-acesso{
-    width: 60%;
+    width: 70%;
     height: 100%;
     background-color: transparent;
     gap: 20px;
@@ -259,11 +314,11 @@ CAMPO CATEGORIA E CURSOS */
     height: 30%;
     background-color: transparent;
     display: flex;
-    flex-direction: column; /* Coloca os elementos um embaixo do outro */
-    justify-content: center; /* Alinha no centro verticalmente */
-    align-items: flex-end; /* Alinha à direita */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end; 
+    
 }
-
 .div-subTitle h2{
     font-size: 3.3rem;
     color: var(--branco-bege);
@@ -271,6 +326,7 @@ CAMPO CATEGORIA E CURSOS */
     margin-top: 0;
     margin-bottom: 0;
     padding-right: 5%;
+    margin-right: 150px;
 }
 
 .div-subTitle p{
@@ -279,6 +335,7 @@ CAMPO CATEGORIA E CURSOS */
     margin-top: 0;
     margin-bottom: 0;
     padding-right: 5%;
+    margin-right: 150px;
 }
 
 .div-subTitle hr{
@@ -287,6 +344,7 @@ CAMPO CATEGORIA E CURSOS */
     background-color: var(--branco-bege);
     border: none;
     padding-left: 10%;
+    margin-right: 150px;
 
 }
 
@@ -305,35 +363,46 @@ CAMPO CATEGORIA E CURSOS */
     align-items: center;
     gap: 20px;
     padding-top: 2%;
+    padding-bottom: 5%;
+
 
 }
+.curso {
+    width: 300px; 
+    height: 150px; 
+    position: relative;
+    margin-right: 150px;
+}
 
-
-.curso img{
-    width: 50%;
+.curso img {
+    width: 100%;
     height: 100%;
-    padding-right: 20px;
+    object-fit: cover;
 }
 /* obs: as imagens devem estar do mesmo tamnho +- 1920x1080  */
 
 .curso a{
     text-decoration: none;
     text-transform: lowercase;
+     display: block;
+    width: 100%;
+    height: 100%;
 }
 .curso img:hover{
     transform: scale(1.05);
     transition: 0.3s;
     background-color: var(--branco-bege);
     opacity: 0.8;
+    /* border-right: 20px solid var(--branco); */
 }
 
 
 .curso h3{
     color: var(--branco-bege);
-    margin: 0 auto; /* Centraliza verticalmente dentro do container */
-    display: block; /* Garante que o elemento ocupe toda a largura disponível */
+    margin: 0 auto; 
+    display: block;
     text-align: end;
-    width: 50%;
+    width: 100%;
     padding-bottom: 1%;
     font-size: 1.7rem;
     padding-right: 15px;
@@ -341,27 +410,483 @@ CAMPO CATEGORIA E CURSOS */
 
 }
 
-/* FOOTER */
-footer{
-    width: 100%;
-    height: 10%;
-    background-color: var(--branco-bege);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+.carrossel-container {
+    width: 300px;
+    height: 150px; 
+    overflow: hidden;
+    position: relative;
 }
 
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel img {
+    min-width: 300px; 
+    height: 150px; 
+    object-fit: cover;
+}
+
+/* Formulário Apoie o projeto */
+.div-esquerda{
+    width: 40%;
+    height: 550px;
+    text-align: left;
+    margin-top: -1%;
+    background-color: var(--branco-bege);
+}
+.div-esquerda h1{
+    font-size: 4.0rem;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    padding-left: 20%;
+    margin-top: 15px;
+}
+.div-esquerda p{
+    color: var(--cinza);
+    padding-left: 20%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    line-height: 1.5;
+    font-weight: 900;
+}
+.div-direita{
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    margin-top: -1%;
+    background-color: var(--azul-escuro);
+    
+}
+.div-direita h1{
+    font-size: 4.0rem;
+    color: var(--branco-bege);
+    font-weight: bold;
+    padding-left: 5%;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+.main-formulario{
+    display: flex;
+    flex-wrap: wrap;
+}
+.formulario{
+    width: 60%;
+    height: 100%;
+    padding-left: 10%;
+    margin-top: -10px;
+    flex-direction: column;
+}
+.formulario label{
+    font-family: vietnam;
+    color: var(--branco-bege);
+    font-size: 16px;
+    padding-right: 3px;
+    margin-bottom: 8px;
+    
+}
+.entrada{
+    width: 300px;
+    height: 25px;
+    background-color: var(--branco-bege);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    font-family: vietnam;
+}
+.formulario textarea{
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: var(--branco-bege);
+    font-family: vietnam;
+    margin-top: 5px;
+}
+.botao{
+    font-family: vietnam;
+    color: var(--branco-bege);
+    font-size: 16px;
+    background-color: var(--azul-normal);
+    border-radius: 10px;
+    height: 50px;
+    width: 90px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+}
+.botao:hover{
+    background-color: var(--azul-escuro);
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--branco-bege);
+    padding: 70px 70px;
+}
+
+/* FOOTER CONTATOS E REDES */
+.footer-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "logo redes"
+        "termos termos";
+    gap: 30px;
+    align-items: start;
+    padding: 0 40px;
+}
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-logo img{
+    cursor: pointer;
+    height: 66px;
+    width: 300px;
+    filter: brightness(0.1) invert(9%) sepia(92%) saturate(1100%) hue-rotate(203deg) contrast(100%)
+}
+.footer-endereco {
+    font-size: 1.0em;
+    color: var(--azul-escuro);
+    line-height: 1.5em;
+}
+.footer-redes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.footer-redes h2{
+    font-family: vietnam;
+    font-weight: bolder;
+    color: #00145A;
+    margin: 0 0 -5px;
+}
+.footer-redes img{
+    height: 4.0em;
+    cursor: pointer;
+}
+.footer-redes-icons {
+  display: flex;
+  gap: 5px;
+}
+.footer-redes a:hover img{
+    color: var(--azul-normal);
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+.footer-redes a:active img{
+    filter:saturate(100%) invert(37%) sepia(71%) saturate(573%) hue-rotate(179deg) brightness(95%) contrast(96%);
+}
+
+
+/* LINKS FOOTER */
 footer ul{
     list-style: none;
     display: flex;
     gap: 25px;
+    padding: 0;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
 }
 footer a{
     text-decoration: none;
     color: var(--azul-escuro);
-    font-size: 1.0rem;
+    font-size: 1.1rem;
 }
 footer a:hover{
     color: var(--cinza);
- }
+}
+
+/* Área de pesquisa dos cursos: filtros */
+.div_filtros {
+    font-family: vietnam;
+    background-color:var(--azul-escuro);
+    color: var(--branco);
+    padding: 1.5rem;
+    max-width: 250px; 
+    width: 300px;   
+}
+
+.filtros-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+}
+
+.filtros-header h1{
+    font-family: bebas;
+    font-size: 2rem;
+    color: var(--branco);
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-limpar {
+    font-family: vietnam;
+    font-size: 1rem;
+    color: var(--azul-normal);
+    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.btn-limpar:hover {
+    background-color: rgba(37, 115, 217, 0.3);
+    color: var(--branco-bege)
+}
+
+.div_filtros input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    opacity: 0.4;
+}
+
+.div_filtros input[type="checkbox"]:checked {
+    opacity: 1;
+}
+
+.div_select {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.div_select h2 {
+    font-family: vietnam;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+}
+/* Área de pesquisa dos cursos*/
+.conteudo-principal {
+    display:flex;    
+    align-items: flex-start;
+}
+
+.div-todos-cursos { 
+    background-color: var(--branco-bege);
+    padding: 2px;    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+     min-height: 800px; 
+     min-width: 1200px; 
+    transition: all 0.3s ease;
+}
+
+.div-todos-cursos  h1 {
+    font-size: 2rem;
+    color: var(--azul-escuro);
+    padding-left: 30px;
+}
+
+.div-cursos { 
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    justify-content: center;
+    /* min-height: 400px;  */
+
+}
+
+.card_curso { 
+    background-color: transparent;
+    border-radius: 8px;
+    width: 280px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.descricao {
+    font-family: vietnam;
+    font-size: 0.9rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    padding-left: 1rem;
+    margin-top: 0.6rem;
+}
+
+.card_curso h3 {
+    text-align: center;
+    color: var(--azul-escuro);
+    font-family: bebas;
+    font-size: 1.3rem;
+    margin: 0.2rem 0;    
+}
+
+.info-curso {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.botoes {
+    font-size: 0.95rem;
+    font-family: bebas;
+}
+
+.avaliacao {
+    color:var(--azul-escuro);
+    cursor: pointer;    
+    font-size: 0.8rem;
+}
+
+.image_curso {
+    width: 100%;
+    height: 180px;
+    background-color: var(--azul-normal);
+    border-radius: 6px;  
+    padding:3%;
+}
+.image_curso img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;  
+
+}
+
+.div-pag {
+    font-family: vietnam;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2rem;
+    color: var(--azul-escuro)
+
+}
+
+.pag {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid rgba(0, 20, 90, 0.5);
+    border-radius: 5px;
+    padding: 2px;
+}
+.pag:hover {
+    
+    color: var(--branco);
+    background-color: var(--azul-escuro);
+    border: 1px solid var(--azul-escuro);  
+}
+
+
+/* FORM APOIE O PROJETO */
+.mensagem-oculta {
+    display: none;
+}
+
+#feedback-apoio { 
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 80%;
+    margin-left: 5%;
+    font-family: vietnam;
+}
+
+.mensagem-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* LOGIN */
+.login{
+    font-family: vietnam;
+    color: var(--branco);
+}
+.div-tituloLogin h1{
+    width: 100%;
+    text-align: center;
+    color: var(--branco-bege);
+    font-size: 4.0rem;
+    margin: 0;
+    padding: 0;
+}
+.formulario-login label{
+    font-family: vietnam;
+    color: var(--branco-bege);
+    font-size: 16px;
+    /* padding-right: 3px; */
+    margin-bottom: -15px;
+    width: 100%;
+    text-align: left;
+    display: block;
+}
+.formulario-login {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entrada-login {
+    width: 100%;
+    height: 25px;
+    background-color: var(--branco-bege);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-family: vietnam;
+}
+.botao-login {
+    font-family: vietnam;
+    color: var(--branco-bege);
+    font-size: 16px;
+    background-color: var(--azul-normal);
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.botao-login:hover {
+    background-color: var(--azul-escuro);
+}
+
+.mensagem-oculta {
+    display: none;
+}
+
+#feedback-login { 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 30%;
+    font-family: vietnam;
+}
+
+.mensagem-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

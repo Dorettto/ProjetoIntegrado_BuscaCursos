@@ -21,11 +21,14 @@ A plataforma Busca Cursos é capaz de:
   Para obter acesso à plataforma e todos os seus recursos é necessário que o dispositivo utilizado tenha os seguintes requisitos mínimos: tela embutida ou periférica, acesso irrestrito à internet com uma conexão estável e instalação de navegador de internet em sua versão mais atualizada (Chrome, Opera, Mozilla e Edge). 
   
 ## Tecnologias Utilizadas
-  <img src = "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src = "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src = "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src = "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src = "https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC"> 
+
   
 ## Licença
 Esse projeto está sob a licença MIT.
 
-## Autores
-
-## Agradecimentos
+## Autoras
+- Bianca Mendes [@Biancamsm](https://github.com/Biancamsm)
+- Gabrielly de Souza [@Gabidanety](https://github.com/Gabidanety)
+- Laura Valentim [@lauravalen](https://github.com/lauravalen)
+- Natália Doreto [@Dorettto](https://github.com/Dorettto)
