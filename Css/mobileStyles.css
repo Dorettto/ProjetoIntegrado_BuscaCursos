@@ -1,0 +1,177 @@
+@media (max-width: 768px) {
+ 
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/BebasNeue-Regular.otf);
+    src: url(../fonts/BebasNeue-Regular.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: vietnam;
+    src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+
+/* Variáveis de cores */
+:root {
+    --azul-escuro: #00145A;
+    --azul-normal: #2573D9;
+    --branco: #F0F9FF;
+    --cinza: #3d3d3d;
+    --branco-bege: #F2E7DC;
+}
+h1, h2, h3, h4{
+    font-family: bebas;
+}
+a, p{
+    font-family: vietnam;
+}
+
+input{
+    font-family: vietnam;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--azul-normal);
+}
+
+.div_container{
+    width: 100%;
+    background-color: var(--azul-escuro);
+    height: 100%;
+}
+
+
+
+header{
+    height: auto;
+    padding: 1rem;
+}
+
+.mobile-botao {
+    display: block;
+}
+
+.mobile-botao svg {
+  color: var(--branco-bege);
+  width: 2rem;
+  height: 2rem;
+}
+
+nav {
+    position: absolute;
+    top: 80px;       
+    left: 0;
+    width: 100%;
+    background: #0f2266; 
+    display: none;    
+    flex-direction: column;
+    padding: 1rem 0;
+    z-index: 9999;
+    transition: 1s;
+}
+
+nav ul {
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.div-login {
+    width: auto;
+    margin: 1rem auto 0;
+    justify-content: center;
+}
+
+nav.ativo {
+    display: flex;
+}
+
+.div-logo img {
+    margin-left: 0;
+    width: 60%;
+    height: auto;
+}
+/* CAMPO BUSCA */
+
+.search-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 30%;
+    background-color: var(--branco-bege);
+    padding: 0.5rem;
+}
+
+.div-titulo{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    justify-content: center;
+}
+
+.div-titulo h1{
+    font-size: 3.8rem;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+.div-titulo p{
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.div-search {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
+    width: 100%; 
+}
+
+.div-search input[type="text"] {
+    width: 360px;
+    height: 25px;
+    padding: 8px;
+    border: 1px solid var(--branco-bege);
+    border-radius: 2.0rem;
+    font-size: 0.9rem;
+    background-color: var(--azul-normal);
+    color: var(--branco-bege);
+}
+.div-search input[type="text"]::placeholder {
+    color: var(--branco-bege); 
+    font-weight: 600;
+}
+
+.sugestoes-container {
+    position: absolute;
+    top: 100%; 
+    background-color: white;
+    border: 1px solid #ffffff;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    width: 85%; 
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    margin-left: 2%;
+}
+
+.sugestao {
+    padding: 8px;
+}
+
+.sugestao:hover {
+    background-color: #eae4e4;
+}
+}
